@@ -1,0 +1,27 @@
+.about__img {
+    max-height: 40vh;
+    width: 100vw;
+    object-fit: cover;
+    margin-bottom: 3rem;
+}
+
+.about__text-container {
+    width: 100%;
+    margin-bottom: 3.5rem;
+
+    @media (min-width: 800px) {
+        width: 70%;
+    }
+}
+
+.about__title {
+    font-size: 2rem;
+    line-height: 38px;
+    
+}
+
+.about__cta {
+    background-color: #FFCC8D;
+    padding: 2rem 2.5rem;
+}
+
