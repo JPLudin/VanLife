@@ -1,0 +1,108 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFF7ED;
+    font-family: "Inter", sans-serif;
+    position: relative;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 
+    [full-width-start] 3rem [medium-width-start] 4rem [content-start] 1fr [content-end] 2rem [full-width-end] 3rem [medium-width-end];
+    
+    @media (min-width: 800px) {
+        grid-template-columns: 
+        [full-width-start] 4rem [medium-width-start] 3rem [content-start] 1fr [content-end] 3rem [full-width-end] 4rem [medium-width-end];
+    }
+
+    @media (min-width: 1200px) {
+        grid-template-columns: 
+        [full-width-start] 6rem [medium-width-end] 4rem [content-start] 1fr [content-end] 4rem [full-width-end] 6rem [medium-width-end];
+    }
+}
+
+.content-grid > * {
+    grid-column: content;
+}
+
+.content-grid > .medium-width {
+    grid-column: mediumg-width;
+}
+
+.content-grid > .full-width {
+    grid-column: full-width;
+}
+
+.container {
+    container-type: inline-size;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media (min-width: 1200px) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    @media (min-width: 800px) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+
+    
+
+       
+
+
+
+/* ---Buttons ---*/
+
+.btn {
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+
+    @media (max-width:1200px) {
+        max-width: 50%;
+    }
+
+    @media (max-width:800px) {
+        max-width: 100%;
+    }
+}
+
+.btn--primary {
+    background-color: #FF8C38;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+    background-color: #E17654;   
+}
+
+.btn--black {
+    background-color: #161616;
+}
+
+.btn--black:hover,
+.btn--black:focus {
+    background-color: #E17654;  
+}
+
+.btn-secondary {
+    background-color: #E17654;
+}
+
+.btn-dark-green {
+    background-color: #115E59;
+}
+
+.btn-accent {
+    background-color: #FFF7ED;
+}
