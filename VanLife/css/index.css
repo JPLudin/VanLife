@@ -10,16 +10,16 @@ body, html {
 .content-grid {
     display: grid;
     grid-template-columns: 
-    [full-width-start] 3rem [medium-width-start] 4rem [content-start] 1fr [content-end] 2rem [full-width-end] 3rem [medium-width-end];
+    [full-width-start] 3rem  [content-start] 2rem [medium-width-start] 1fr [medium-width-end] 2rem [content-end] 3rem [full-width-end];
     
     @media (min-width: 800px) {
         grid-template-columns: 
-        [full-width-start] 4rem [medium-width-start] 3rem [content-start] 1fr [content-end] 3rem [full-width-end] 4rem [medium-width-end];
+        [full-width-start] 4rem [medium-width-start] 3rem [content-start] 1fr [medium-width-end] 3rem [content-end] 4rem [full-width-end];
     }
 
     @media (min-width: 1200px) {
         grid-template-columns: 
-        [full-width-start] 6rem [medium-width-end] 4rem [content-start] 1fr [content-end] 4rem [full-width-end] 6rem [medium-width-end];
+        [full-width-start] 6rem  [content-start] 4rem [medium-width-start] 1fr [medium-width-end] 4rem [content-end] 6rem [full-width-end];
     }
 }
 
@@ -28,7 +28,7 @@ body, html {
 }
 
 .content-grid > .medium-width {
-    grid-column: mediumg-width;
+    grid-column: medium-width;
 }
 
 .content-grid > .full-width {
@@ -50,7 +50,9 @@ body, html {
     }
 }
 
-
+img {
+    display: block;
+}
     
 
        
@@ -95,14 +97,56 @@ body, html {
     background-color: #E17654;  
 }
 
-.btn-secondary {
+.btn--secondary {
     background-color: #E17654;
 }
 
-.btn-dark-green {
+.btn--secondary:hover,
+.btn--secondary:focus {
+    background-color: #FFEAD0;
+    color: black;
+}
+
+.btn--dark-green {
     background-color: #115E59;
 }
 
-.btn-accent {
-    background-color: #FFF7ED;
+.btn--dark-green:hover,
+.btn--dark-green:focus {
+    background-color: #1d9c94;
 }
+
+.btn--accent {
+    background-color: #FFEAD0;
+    color: black;
+}
+
+.btn-underline {
+    position: relative;
+    border: none;
+    background-color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 0 !important;
+}
+
+.btn-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    border-radius: 6px;
+    height: 0.1em;
+    bottom: .7rem;
+    left: 0;
+    background: currentcolor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.btn-underline:hover::after {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
