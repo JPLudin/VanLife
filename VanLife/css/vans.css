@@ -1,0 +1,70 @@
+.vans {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+
+    @media (min-width: 800px) {
+        grid-template-columns: 1fr 1fr ;
+    }
+
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 2000px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.van {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+   
+}
+
+.van__img {
+    flex: 1 1 0%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.van__text-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.van__title {
+    margin-top: 0;
+}
+
+.van__price {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.van__price span {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.vans__btn-container {
+    display: flex;
+    margin-bottom: 2rem;
+
+}
+
+.vans__btn-container button {
+    margin-right: 2rem;
+}
+
+.van__btn {
+    max-width: 100% !important;
+}
