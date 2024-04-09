@@ -1,0 +1,20 @@
+.van-detail {
+    width: 100%;
+
+    @media (min-width: 1200px) {
+        width: 60%;
+    }
+}
+
+.van-detail__btn {
+    margin-right: auto;
+    margin-bottom: 3rem;
+} q 
+
+.van-detail__img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+}
