@@ -1,0 +1,66 @@
+.host-van-detail {
+    background-color: white;
+    padding: 2rem 1.5rem;
+    border-radius: 6px;
+}
+
+.host-van-detail__content {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-column-gap: 2rem;
+
+    @media (min-width: 800px) {
+        grid-template-columns: 35% 1fr;
+    }
+
+    @media (min-width: 1200px) {
+        grid-template-columns: 40% 1fr;
+    }
+}
+
+.host-van-detail__content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.host-van-detail__img {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 6px;
+}
+
+.host-van-detail__btn {
+    margin-top: 3rem;
+}
+
+.host-van-detail__btn-container {
+    width: 100%;
+}
+
+.host-van-detail__nav {
+    margin: 2rem 0;
+}
+
+/* Host Review */
+
+.host-reviews {
+    padding-inline: 26px;
+    color: #161616;
+    margin-top: 2rem;
+}
+
+
+
+/* Host Income */
+
+.host-income {
+    margin-top: 2rem;
+}
+
+.host-income__title {
+    font-size: 3rem;
+}
+

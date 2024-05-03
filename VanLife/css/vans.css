@@ -20,9 +20,13 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+}
 
-   
+.van__link {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
 }
 
 .van__img {
@@ -30,6 +34,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 6px;
+    display: block;
 }
 
 .van__text-container {
@@ -40,6 +45,7 @@
 
 .van__title {
     margin-top: 0;
+    padding-bottom: 1rem;
 }
 
 .van__price {
@@ -61,8 +67,8 @@
 
 }
 
-.vans__btn-container button {
-    margin-right: 2rem;
+.vans__btn-container .btn {
+    margin-right: 1rem;
 }
 
 .van__btn {

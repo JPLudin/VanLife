@@ -1,12 +1,12 @@
 import React from "react"
-import { useParams } from "react-router-dom"
-import "../../css/van-detail.css"
-import "../../css/index.css"
+import { Link, useParams, useLocation } from "react-router-dom"
+import "../../../css/van-detail.css"
+import "../../../css/index.css"
 
 export default function VanDetai() {
-    const { id } = useParams();
+    const { id } = useParams()
+    const location = useLocation()
     const [van, setVan] = React.useState(null)
-
     
     React.useEffect(() => {
         fetch("/data.json")
@@ -18,15 +18,24 @@ export default function VanDetai() {
     }, [id])
 
     if (!van) {
-        return <div>Loading...</div>; // Oder jede andere Art von Ladeanzeige
+        return <div>Loading...</div>
     }
 
+    const search = location.state?.search || ""
+    const type = location.state?.type || "all"
+
     return (
-        <section className="content-grid">
+        <section className="van-detail content-grid">
             {
                 van ? (
                     <div>
-                        <button className="btn-underline van-detail__btn">Back to all vans</button>
+                        <Link to={`..${location.state.search}`} relative="path">
+                            <button className="btn-underline van-detail__back-btn">
+                                {
+                                    search ? `Back to all ${type} vans` : "Back to all vans"
+                                }
+                                </button>
+                        </Link>
                         <div className="van-detail medium-width">
                             <img src={van.imageUrl} alt={van.name} className="van-detail__img"/>
                                 {van.type === "simple" ? <button className="btn btn--secondary">Simple</button>

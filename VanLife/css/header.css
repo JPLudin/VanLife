@@ -3,35 +3,40 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 82px;;
+    height: 82px;
     width: 100%;
 }
 
 .home-btn {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: black;
     text-transform: uppercase;
+
+    @media (min-width: 800px) {
+        font-size: 1.5rem;
+    }
 }
 
-.links {
-    padding: 2rem 0;
-}
 .navbar .link {
     text-decoration: none;
     color: #4D4D4D;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 600;
-    padding: 1rem;
+    padding: 2rem .5rem 2rem 0;
+
+    @media (min-width: 800px) {
+        padding: 2rem 1rem 2rem 0;
+        font-size: 1rem;
+    }
 }
 
 .navbar .link:last-of-type {
     padding-right: 0;
 }
 
-.link:hover,
-.link:focus {
+.link:hover {
     color: black;
     text-decoration: underline;
 }

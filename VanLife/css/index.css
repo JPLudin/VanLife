@@ -10,7 +10,7 @@ body, html {
 .content-grid {
     display: grid;
     grid-template-columns: 
-    [full-width-start] 3rem  [content-start] 2rem [medium-width-start] 1fr [medium-width-end] 2rem [content-end] 3rem [full-width-end];
+    [full-width-start] 1rem [content-start] 2rem [medium-width-start] 1fr [medium-width-end] 2rem [content-end] 1rem [full-width-end];
     
     @media (min-width: 800px) {
         grid-template-columns: 
@@ -53,6 +53,11 @@ body, html {
 img {
     display: block;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
     
 
        
@@ -64,18 +69,21 @@ img {
 .btn {
     color: white;
     border-radius: 6px;
-    font-size: 1rem;
-    padding: 1rem 1.5rem;
+    font-size: .8rem;
+    padding: .4rem .8rem;
     border: none;
     cursor: pointer;
     transition: color .3s ease-in-out;
 
-    @media (max-width:1200px) {
+    @media (min-width:1200px) {
         max-width: 50%;
+        padding: 1rem 1.5rem;
     }
 
-    @media (max-width:800px) {
+    @media (min-width:800px) {
         max-width: 100%;
+        font-size: 1rem;
+        
     }
 }
 
@@ -121,11 +129,16 @@ img {
     color: black;
 }
 
+.btn--accent:hover {
+    opacity: .7;
+}
+
 .btn-underline {
+    color: black;
     position: relative;
     border: none;
     background-color: inherit;
-    font-size: 1rem;
+
     cursor: pointer;
     margin-left: auto;
     margin-right: 0 !important;
@@ -138,7 +151,7 @@ img {
     transform: scaleX(1);
     border-radius: 6px;
     height: 0.1em;
-    bottom: .7rem;
+    bottom: 0;
     left: 0;
     background: currentcolor;
     transform-origin: bottom right;
@@ -149,4 +162,10 @@ img {
     transform: scaleX(0);
     transform-origin: bottom right;
 }
+
+.active-link {
+    font-weight: bold !important;
+    color: black !important;
+}
+
 
